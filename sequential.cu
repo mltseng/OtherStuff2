@@ -66,8 +66,6 @@ kernel2 (dtype *input, dtype *output, unsigned int n)
 	unsigned int bid = gridDim.x * blockIdx.y + blockIdx.x;
 	unsigned int i = bid * blockDim.x + threadIdx.x;
 
-	int stride = blockDim.x/2;
-	
 	if(i < n){
 		scratch[threadIdx.x] = input[i];
 	}
@@ -76,11 +74,10 @@ kernel2 (dtype *input, dtype *output, unsigned int n)
 	}
 	__syncthreads();
 
-	for(unsigned int s = 1;s < blockDim.x;s = s << 1){
-		if(threadIdx.x < stride){
-			scratch[threadIdx.x] += scratch[threadIdx.x + stride];
+	for(unsigned int s = blockDim.x/2;s > 0;s = s >> 1){
+		if(threadIdx.x < s){
+			scratch[threadIdx.x] += scratch[threadIdx.x + s];
 		}
-		stride = stride >> 1;
 		__syncthreads();
 	}
 	if(threadIdx.x == 0){

@@ -1,4 +1,4 @@
-Script began: Fri Mar 3 13:37:22 PST 2017
+Script began: Tue Mar 7 23:10:54 PST 2017
 Node: compute-1-14.local
 Current directory: /data/users/mltseng/hw3
 
@@ -7,41 +7,41 @@ Current directory: /data/users/mltseng/hw3
 N: 8388608
 Timer: gettimeofday
 Timer resolution: ~ 1 us (?)
-Time to execute naive GPU reduction kernel: 0.003351 secs
-Effective bandwidth: 10.01 GB/s
-Time to execute naive CPU reduction: 0.104503 secs
-SUCCESS: GPU: 41.943829 	CPU: 41.943829
+Time to execute naive GPU reduction kernel: 0.003348 secs
+Effective bandwidth: 10.02 GB/s
+Time to execute naive CPU reduction: 0.11599 secs
+SUCCESS: GPU: 41.929802 	CPU: 41.929802
 *** Trial 2 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute naive GPU reduction kernel: 0.003349 secs
+Effective bandwidth: 10.02 GB/s
+Time to execute naive CPU reduction: 0.116027 secs
+SUCCESS: GPU: 41.939171 	CPU: 41.939171
+*** Trial 3 ***
 N: 8388608
 Timer: gettimeofday
 Timer resolution: ~ 1 us (?)
 Time to execute naive GPU reduction kernel: 0.003348 secs
 Effective bandwidth: 10.02 GB/s
-Time to execute naive CPU reduction: 0.104581 secs
-SUCCESS: GPU: 41.930202 	CPU: 41.930202
-*** Trial 3 ***
-N: 8388608
-Timer: gettimeofday
-Timer resolution: ~ 1 us (?)
-Time to execute naive GPU reduction kernel: 0.00335 secs
-Effective bandwidth: 10.02 GB/s
-Time to execute naive CPU reduction: 0.104597 secs
-SUCCESS: GPU: 41.930202 	CPU: 41.930202
+Time to execute naive CPU reduction: 0.115987 secs
+SUCCESS: GPU: 41.945793 	CPU: 41.945793
 *** Trial 4 ***
 N: 8388608
 Timer: gettimeofday
 Timer resolution: ~ 1 us (?)
-Time to execute naive GPU reduction kernel: 0.003359 secs
-Effective bandwidth: 9.99 GB/s
-Time to execute naive CPU reduction: 0.104668 secs
-SUCCESS: GPU: 41.931244 	CPU: 41.931244
+Time to execute naive GPU reduction kernel: 0.003351 secs
+Effective bandwidth: 10.01 GB/s
+Time to execute naive CPU reduction: 0.116005 secs
+SUCCESS: GPU: 41.942085 	CPU: 41.942085
 *** Trial 5 ***
 N: 8388608
 Timer: gettimeofday
 Timer resolution: ~ 1 us (?)
-Time to execute naive GPU reduction kernel: 0.00335 secs
-Effective bandwidth: 10.02 GB/s
-Time to execute naive CPU reduction: 0.10449 secs
-SUCCESS: GPU: 41.931244 	CPU: 41.931244
+Time to execute naive GPU reduction kernel: 0.003358 secs
+Effective bandwidth: 9.99 GB/s
+Time to execute naive CPU reduction: 0.116099 secs
+SUCCESS: GPU: 41.931889 	CPU: 41.931889
 
 === Done! ===

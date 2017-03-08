@@ -69,7 +69,6 @@ kernel1(dtype *input, dtype *output, unsigned int n)
 	unsigned int i = bid * blockDim.x + threadIdx.x;
 
 	int index;
-	int stride = 1;
 	int xp2 = 2;
 
 	if(i < n){
@@ -82,12 +81,11 @@ kernel1(dtype *input, dtype *output, unsigned int n)
 
 	for(unsigned int s = 1;s < blockDim.x;s = s << 1){
 		index = xp2*threadIdx.x;
-		
+
 		if(index < blockDim.x){
-			scratch[index] += scratch[index + stride];
+			scratch[index] += scratch[index + s];
 		}
-		stride *= 2;
-		xp2 *= 2; 
+		xp2 = xp2 << 1;
 
 		__syncthreads();
 	}

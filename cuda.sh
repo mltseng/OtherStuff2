@@ -41,12 +41,14 @@ echo "Current directory: ${PWD}"
 echo ""
 #echo "=== Running 5 trials of naive ... ==="
 #echo "=== Running 5 trials of stride ... ==="
-echo "=== Running 5 trials of sequential ... ==="
+#echo "=== Running 5 trials of sequential ... ==="
+echo "=== Running 5 trials of first_add ... ==="
 for trial in 1 2 3 4 5; do
   echo "*** Trial ${trial} ***"
 #	./naive
 #	./stride
-	./sequential
+#	./sequential
+	./first_add
 done
 
 echo ""

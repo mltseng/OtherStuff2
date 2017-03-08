@@ -8,3 +8,9 @@ stride:
 
 sequ:
 	nvcc sequential.cu timer.c -o sequential
+
+naive:	
+	nvcc naive.cu timer.c -o naive
+
+fadd:
+	nvcc first_add.cu timer.c -o first_add
