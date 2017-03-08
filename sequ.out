@@ -1,0 +1,47 @@
+Script began: Mon Mar 6 14:30:32 PST 2017
+Node: compute-1-14.local
+Current directory: /data/users/mltseng/hw3
+
+=== Running 5 trials of sequential ... ===
+*** Trial 1 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute sequential index GPU reduction kernel: 0.001823 secs
+Effective bandwidth: 18.41 GB/s
+Time to execute naive CPU reduction: 0.10452 secs
+SUCCESS: GPU: 41.945210  CPU: 41.945210
+*** Trial 2 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute sequential index GPU reduction kernel: 0.001824 secs
+Effective bandwidth: 18.40 GB/s
+Time to execute naive CPU reduction: 0.099601 secs
+SUCCESS: GPU: 41.951420  CPU: 41.951420
+*** Trial 3 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute sequential index GPU reduction kernel: 0.001812 secs
+Effective bandwidth: 18.52 GB/s
+Time to execute naive CPU reduction: 0.100547 secs
+SUCCESS: GPU: 41.932835  CPU: 41.932835
+*** Trial 4 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute sequential index GPU reduction kernel: 0.001824 secs
+Effective bandwidth: 18.40 GB/s
+Time to execute naive CPU reduction: 0.099561 secs
+SUCCESS: GPU: 41.933441  CPU: 41.933441
+*** Trial 5 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute sequential index GPU reduction kernel: 0.001812 secs
+Effective bandwidth: 18.52 GB/s
+Time to execute naive CPU reduction: 0.09957 secs
+SUCCESS: GPU: 41.948112  CPU: 41.948116
+
+=== Done! ===
