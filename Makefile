@@ -18,5 +18,14 @@ fadd:
 unroll:
 	nvcc unroll.cu timer.c -o unroll
 
+multiple:
+	nvcc multiple.cu timer.c -o multiple
+
+mult2:
+	nvcc mult.cu timer.c -o multiple
+
+trans:
+	nvcc transpose.cu timer.c -o transpose
+
 clean:
-	rm unroll
+	rm -rf unroll multiple

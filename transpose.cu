@@ -9,8 +9,8 @@ typedef float dtype;
 
 __global__ 
 void matTrans(dtype* AT, dtype* A, int N)  {
-	/* Fill your code here */
-
+	/* Fill your code here */	
+	AT[blockIdx.x][threadIdx.x] = A[threadIdx.x][blockIdx.x];
 }
 
 void
@@ -66,22 +66,37 @@ cmpArr (dtype* a, dtype* b, int N)
 void
 gpuTranspose (dtype* A, dtype* AT, int N)
 {
-  struct stopwatch_t* timer = NULL;
-  long double t_gpu;
 
+	/* Timer */
+ 	struct stopwatch_t* timer = NULL;
+	long double t_gpu;
+
+	/* data structure */
+	dtype *d_idata, *d_odata;
 	
-  /* Setup timers */
-  stopwatch_init ();
-  timer = stopwatch_create ();
+ 	/* Setup timers */
+ 	stopwatch_init ();
+ 	timer = stopwatch_create ();
 
-  stopwatch_start (timer);
+	/* allocate memory */
+	CUDA_CHECK_ERROR(cudaMalloc(&d_idata, N*N*sizeof(dtype)));
+	CUDA_CHECK_ERROR(cudaMalloc(&d_odata, N*N*sizeof(dtype)));
+
+	/* Copy array */
+	CUDA_CHECK_ERROR(cudaMemcpy(d_idata, A, N*N*sizeof(dtype), cudaMemcpyHostToDevice));
+  	
+
+ 	stopwatch_start (timer);
 	/* run your kernel here */
+	matTrans<<<N, N>>>(d_odata, d_idata, N);
 
-  cudaThreadSynchronize ();
-  t_gpu = stopwatch_stop (timer);
-  fprintf (stderr, "GPU transpose: %Lg secs ==> %Lg billion elements/second\n",
-           t_gpu, (N * N) / t_gpu * 1e-9 );
+ 	cudaThreadSynchronize ();
+ 	t_gpu = stopwatch_stop (timer);
+ 	fprintf (stderr, "GPU transpose: %Lg secs ==> %Lg billion elements/second\n", t_gpu, (N * N) / t_gpu * 1e-9 );
 
+	/* Copy Result back from GPU */
+	CUDA_CHECK_ERROR(cudaMemcpy(&AT, d_odata, sizeof(dtype), cudaMemcpyDeviceToHost));
+	
 }
 
 int 

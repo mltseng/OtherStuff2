@@ -43,14 +43,16 @@ echo ""
 #echo "=== Running 5 trials of stride ... ==="
 #echo "=== Running 5 trials of sequential ... ==="
 #echo "=== Running 5 trials of first_add ... ==="
-echo "=== Running 5 trials of unroll ... ==="
+#echo "=== Running 5 trials of unroll ... ==="
+echo "=== Running 5 trials of multiple ... ==="
 for trial in 1 2 3 4 5; do
   echo "*** Trial ${trial} ***"
 #	./naive
 #	./stride
 #	./sequential
 #	./first_add
-	./unroll
+#	./unroll
+	./multiple
 done
 
 echo ""
