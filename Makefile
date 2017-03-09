@@ -14,3 +14,9 @@ naive:
 
 fadd:
 	nvcc first_add.cu timer.c -o first_add
+
+unroll:
+	nvcc unroll.cu timer.c -o unroll
+
+clean:
+	rm unroll
