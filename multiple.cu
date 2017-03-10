@@ -84,23 +84,10 @@ kernel5(dtype *g_idata, dtype *g_odata, unsigned int n)
 	}
 
 	if(threadIdx.x < 32){
-		if(blockDim.x >= 64){
-			scratch[threadIdx.x] += scratch[threadIdx.x + 32];
-		}
-		if(blockDim.x >= 32){
-			scratch[threadIdx.x] += scratch[threadIdx.x + 16];
-		}
-		if(blockDim.x >= 16){
-			scratch[threadIdx.x] += scratch[threadIdx.x + 8];
-		}
-		if(blockDim.x >= 8){
-			scratch[threadIdx.x] += scratch[threadIdx.x + 4];
-		}
-		if(blockDim.x >= 4){
-			scratch[threadIdx.x] += scratch[threadIdx.x + 2];
-		}
-		if(blockDim.x >= 2){
-			scratch[threadIdx.x] += scratch[threadIdx.x + 1];
+		for(unsigned int s = 32;s > 0; s = s >> 1){
+			if(blockDim.x >= s*2){
+				scratch[threadIdx.x] += scratch[threadIdx.x + s];
+			}
 		}
 	}
 	if(threadIdx.x == 0){

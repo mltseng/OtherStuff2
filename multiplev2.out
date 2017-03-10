@@ -1,0 +1,47 @@
+Script began: Thu Mar 9 23:23:47 PST 2017
+Node: compute-1-14.local
+Current directory: /data/users/mltseng/hw3
+
+=== Running 5 trials of multiple ... ===
+*** Trial 1 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute multiple add GPU reduction kernel: 0.000329 secs
+Effective bandwidth: 101.99 GB/s
+Time to execute naive CPU reduction: 0.142534 secs
+SUCCESS: GPU: 41.934883  CPU: 41.934879
+*** Trial 2 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute multiple add GPU reduction kernel: 0.000338 secs
+Effective bandwidth: 99.27 GB/s
+Time to execute naive CPU reduction: 0.11618 secs
+SUCCESS: GPU: 41.928230  CPU: 41.928226
+*** Trial 3 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute multiple add GPU reduction kernel: 0.000316 secs
+Effective bandwidth: 106.18 GB/s
+Time to execute naive CPU reduction: 0.116154 secs
+SUCCESS: GPU: 41.933395  CPU: 41.933392
+*** Trial 4 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute multiple add GPU reduction kernel: 0.000341 secs
+Effective bandwidth: 98.40 GB/s
+Time to execute naive CPU reduction: 0.116218 secs
+SUCCESS: GPU: 41.940994  CPU: 41.940990
+*** Trial 5 ***
+N: 8388608
+Timer: gettimeofday
+Timer resolution: ~ 1 us (?)
+Time to execute multiple add GPU reduction kernel: 0.000343 secs
+Effective bandwidth: 97.83 GB/s
+Time to execute naive CPU reduction: 0.116085 secs
+SUCCESS: GPU: 41.936478  CPU: 41.936478
+
+=== Done! ===

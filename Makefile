@@ -25,7 +25,7 @@ mult2:
 	nvcc mult.cu timer.c -o multiple
 
 trans:
-	nvcc transpose.cu timer.c -o transpose
+	nvcc -g -G transpose.cu timer.c -o transpose
 
 clean:
-	rm -rf unroll multiple
+	rm -rf unroll multiple transpose POSE*
