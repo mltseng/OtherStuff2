@@ -1,0 +1,16 @@
+Tony Phi
+Michael Tseng
+
+Final Report
+
+1. Explain how the effective bandwith is calculated:
+
+    The effective bandwith is calculated as the number of bytes being worked on in a job divided by 
+	the time it takes for the job to run in seconds. 
+
+2. How much faster than the initial code is this version?
+	
+   The naive implementation averaged 3.3ms for a job but the stride implementation averaged 2.1ms per 
+   job. 
+   
+3 to 6: Check the .out file for each 
